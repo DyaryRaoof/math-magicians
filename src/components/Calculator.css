@@ -1,0 +1,32 @@
+.calc-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1px;
+  text-align: center;
+  margin: 10% 30%;
+}
+
+.calc-wrapper span {
+  padding: 10px;
+  height: 30px;
+}
+
+.calc-wrapper span:first-child {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: #858694;
+}
+
+.calc-wrapper span:nth-child(18) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.orange {
+  background-color: #f5913e;
+}
+
+.grey {
+  background-color: #e0e0e0;
+}
