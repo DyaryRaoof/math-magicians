@@ -10,6 +10,9 @@
 .calc-wrapper span {
   padding: 10px;
   height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .calc-wrapper span:first-child {
