@@ -1,35 +1,45 @@
 import React from 'react';
 import './Calculator.css';
+import calculate from '../logic/calculate';
+import CalcButton from './CalcButton';
+import DisplayButton from './DisplayButton';
 
 class Caculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { calculator: { total: 0, next: 0, operation: '' } };
   }
 
+  performCalculation = (operation) => {
+    this.setState((state) => ({
+      calculator: calculate(state.calculator, operation),
+    }));
+  };
+
   render() {
+    const { calculator } = this.state;
     return (
       <div className="calc-wrapper">
-        <span className="grey">0</span>
-        <span className="grey">A/C</span>
-        <span className="grey">+/-</span>
-        <span className="grey">%</span>
-        <span className="orange">÷</span>
-        <span className="grey">7</span>
-        <span className="grey">8</span>
-        <span className="grey">9</span>
-        <span className="orange">x</span>
-        <span className="grey">4</span>
-        <span className="grey">5</span>
-        <span className="grey">6</span>
-        <span className="orange">-</span>
-        <span className="grey">1</span>
-        <span className="grey">2</span>
-        <span className="grey">3</span>
-        <span className="orange">+</span>
-        <span className="grey">0</span>
-        <span className="grey">.</span>
-        <span className="orange">=</span>
+        <DisplayButton calculator={calculator} />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="A/C" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="+/-" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="%" />
+        <CalcButton myClass="orange" myClick={this.performCalculation} myText="÷" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="7" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="8" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="9" />
+        <CalcButton myClass="orange" myClick={this.performCalculation} myText="x" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="4" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="5" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="6" />
+        <CalcButton myClass="orange" myClick={this.performCalculation} myText="-" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="1" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="2" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="3" />
+        <CalcButton myClass="orange" myClick={this.performCalculation} myText="+" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="0" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="." />
+        <CalcButton myClass="orange" myClick={this.performCalculation} myText="=" />
       </div>
     );
   }
