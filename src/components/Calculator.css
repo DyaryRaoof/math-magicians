@@ -25,6 +25,9 @@
   grid-column-start: 1;
   grid-column-end: 5;
   background-color: #858694;
+  justify-content: flex-end;
+  color: white;
+  font-size: 20px;
 }
 
 .calc-wrapper button:nth-child(18) {

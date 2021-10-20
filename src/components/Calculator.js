@@ -21,7 +21,7 @@ class Caculator extends React.Component {
     return (
       <div className="calc-wrapper">
         <DisplayButton calculator={calculator} />
-        <CalcButton myClass="grey" myClick={this.performCalculation} myText="A/C" />
+        <CalcButton myClass="grey" myClick={this.performCalculation} myText="AC" />
         <CalcButton myClass="grey" myClick={this.performCalculation} myText="+/-" />
         <CalcButton myClass="grey" myClick={this.performCalculation} myText="%" />
         <CalcButton myClass="orange" myClick={this.performCalculation} myText="÷" />
