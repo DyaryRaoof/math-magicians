@@ -1,34 +1,30 @@
-import React from 'react';
 import { PropTypes } from 'prop-types';
 
-class DisplayButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  showCorrectValue() {
-    const { calculator } = this.props;
-    if (calculator.next) {
-      return calculator.next;
+const DisplayButton = ({ total, next, operation }) => {
+  const showCorrectValue = () => {
+    if (!total && !operation && !next) {
+      return 0;
     }
-    if (calculator.total) {
-      return calculator.total;
-    }
-    return 0;
-  }
+    return `${total || ''} ${operation || ''} ${next || ''} `;
+  };
 
-  render() {
-    return (
-      <button type="button" className="grey">
-        {this.showCorrectValue()}
-      </button>
-    );
-  }
-}
+  return (
+    <button type="button" className="grey">
+      {showCorrectValue()}
+    </button>
+  );
+};
 
 DisplayButton.propTypes = {
-  calculator: PropTypes.node.isRequired,
+  total: PropTypes.string,
+  operation: PropTypes.string,
+  next: PropTypes.string,
+};
+
+DisplayButton.defaultProps = {
+  total: '0',
+  operation: null,
+  next: null,
 };
 
 export default DisplayButton;
