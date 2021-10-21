@@ -9,7 +9,6 @@ class DisplayButton extends React.Component {
 
   showCorrectValue() {
     const { calculator } = this.props;
-    console.log(calculator);
 
     if (!calculator.total && !calculator.operation && !calculator.next) {
       return 0;
