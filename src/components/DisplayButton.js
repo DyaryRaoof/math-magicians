@@ -9,13 +9,14 @@ class DisplayButton extends React.Component {
 
   showCorrectValue() {
     const { calculator } = this.props;
-    if (calculator.next) {
-      return calculator.next;
+    console.log(calculator);
+
+    if (!calculator.total && !calculator.operation && !calculator.next) {
+      return 0;
     }
-    if (calculator.total) {
-      return calculator.total;
-    }
-    return 0;
+    return `${calculator.total ? calculator.total : ''} ${
+      calculator.operation ? calculator.operation : ''
+    } ${calculator.next ? calculator.next : ''} `;
   }
 
   render() {
