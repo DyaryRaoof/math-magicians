@@ -1,10 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Calculator from './components/Calculator';
-import Header from './components/Header';
-import Home from './components/Home';
-import Qoute from './components/Quote';
+import Container from './components/Container';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,23 +10,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Router>
-          <Header />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/calculator">
-              <Calculator />
-            </Route>
-            <Route exact path="/quote">
-              <Qoute />
-            </Route>
-          </Switch>
-        </Router>
-
-      </div>
+      <Container />
     );
   }
 }
