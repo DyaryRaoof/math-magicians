@@ -1,6 +1,8 @@
 import './App.css';
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Calculator from './components/Calculator';
+import Header from './components/Header';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +11,19 @@ class App extends React.Component {
   }
 
   render() {
-    return <Calculator />;
+    return (
+      <div>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/calculator">
+              <Calculator />
+            </Route>
+          </Switch>
+        </Router>
+
+      </div>
+    );
   }
 }
 
