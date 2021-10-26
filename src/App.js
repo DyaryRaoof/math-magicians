@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import Calculator from './components/Calculator';
+import Container from './components/Container';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +9,9 @@ class App extends React.Component {
   }
 
   render() {
-    return <Calculator />;
+    return (
+      <Container />
+    );
   }
 }
 

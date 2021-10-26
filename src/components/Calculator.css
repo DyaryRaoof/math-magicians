@@ -4,11 +4,11 @@
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 1px;
   text-align: center;
-  margin: 10% 30%;
+  margin-right: 10%;
 }
 
 .calc-wrapper button {
-  padding: 10px;
+  padding: 30px 70px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -41,4 +41,15 @@
 
 .grey {
   background-color: #e0e0e0;
+}
+
+.calc-container {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.calc-container h1 {
+  padding-right: 10%;
 }

@@ -1,0 +1,14 @@
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.navbar-wrapper > span:nth-child(1) {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.navbar-wrapper > span:not('#logo') {
+  padding: 2px;
+}
