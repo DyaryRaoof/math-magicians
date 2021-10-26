@@ -1,0 +1,13 @@
+.qoute-wrapper {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.activated-link {
+  color: orange;
+}
