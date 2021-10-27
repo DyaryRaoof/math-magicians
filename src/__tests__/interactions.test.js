@@ -12,7 +12,7 @@ describe('test calculator button interactions', () => {
     return expect(display).toBeInTheDocument;
   });
 
-  test('test button interaction to type 88', () => {
+  test('test button interaction to type 777', () => {
     render(<Calculator />);
     const button = screen.getByRole('button', { name: /7/i });
     userEvent.click(button);
