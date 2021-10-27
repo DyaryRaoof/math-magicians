@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Home from '../components/Home';
 import Quote from '../components/Quote';
@@ -46,5 +47,14 @@ describe('Testing Quote page', () => {
   test('test h1', () => {
     render(<Container />);
     return expect(screen.getByRole('heading').textContent).toBe('Welcome to our page !');
+  });
+});
+
+describe('Testing Container page with jest snapshot', () => {
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(<Container />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
