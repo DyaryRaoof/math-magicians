@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => (
   <div className="navbar-wrapper">
-    <span id="logo">Math Magicians</span>
+    <span id="logo" data-testid="logo">Math Magicians</span>
     <span>
       <NavLink to="/" exact activeClassName="activated-link">Home</NavLink>
       <span> | </span>
@@ -12,7 +12,6 @@ const Header = () => (
       <span> | </span>
       <NavLink to="/quote" exact activeClassName="activated-link">Quote</NavLink>
     </span>
-
   </div>
 );
 

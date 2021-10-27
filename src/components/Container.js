@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Calculator from './Calculator';
 import Header from './Header';
 import Home from './Home';
-import Qoute from './Quote';
+import Quote from './Quote';
 
 const Container = () => (
-  <div>
+  <div data-testid="container">
     <Router>
       <Header />
       <Switch>
@@ -16,11 +16,10 @@ const Container = () => (
           <Calculator />
         </Route>
         <Route exact path="/quote">
-          <Qoute />
+          <Quote />
         </Route>
       </Switch>
     </Router>
-
   </div>
 );
 
