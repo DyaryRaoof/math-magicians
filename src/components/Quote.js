@@ -1,7 +1,7 @@
 import './Quote.css';
 
-const Qoute = () => (
-  <div className="qoute-wrapper">
+const Quote = () => (
+  <div className="quote-wrapper" data-testid="division">
     <p>
       Mathematics as an expression of the human mind reflects the active will,
       the contemplative reason, and the desire for aesthetic perfection.
@@ -11,4 +11,4 @@ const Qoute = () => (
   </div>
 );
 
-export default Qoute;
+export default Quote;
