@@ -14,6 +14,10 @@
 - create-react-app
 - JSX
 
+## Live Demo
+[Heroku](https://enigmatic-sands-92355.herokuapp.com/)
+[Netlify]( https://sharp-mcclintock-9b4a78.netlify.app/)
+
 ## Getting Started
 
 
@@ -22,6 +26,8 @@
 - Install dependencies with npm i;
 - Use npm start to start the website;
 - Use npm run test to run the tests;
+
+## Live Demo
 
 ## Authors
 
